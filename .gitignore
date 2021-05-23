@@ -1,6 +1,9 @@
 # dependencies
 node_modules
 
+# OS
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -39,3 +42,10 @@ coverage
 
 # built output directory
 dist
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

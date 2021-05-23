@@ -1,4 +1,6 @@
-import { IGenericRepository } from "../generic-repository.interface";
-import { Movie } from "entities";
+import { IGenericRepository } from '../generic-repository.interface';
+import { Movie } from 'entities';
 
-export interface MovieRepository extends IGenericRepository<Movie> {}
+export interface IMovieRepository extends IGenericRepository<Movie> {
+  toMakeEsLintHappy: string;
+}

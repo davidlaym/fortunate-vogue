@@ -1,8 +1,8 @@
-import { Movie } from "../../entities";
-import { MovieRepository } from "./movie-repository.interface";
+import { Movie } from '../../entities';
+import { IMovieRepository } from './movie-repository.interface';
 
 export function buildListAllMovies(
-  movieRepository: MovieRepository
+  movieRepository: IMovieRepository,
 ): () => Movie[] {
   return function listAllMovies(): Movie[] {
     return movieRepository.findAll();

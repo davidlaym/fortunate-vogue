@@ -4,7 +4,8 @@
   "private": true,
   "description": "Learning to use NestJS with clean architecture in a monorepo scenario.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "start:nestjs": "ts-node nestjs/src/main.ts",
     "build": "tsc --build",
     "prebuild": "npm run lint",
     "lint": "npx eslint -- '!(node_modules|dist)/**/*.ts'"
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/davidlaym/fortunate-vogue#readme",
   "devDependencies": {
+    "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
     "eslint": "^7.27.0",
