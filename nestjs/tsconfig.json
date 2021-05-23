@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.test.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "../dist/nestjs"
+  },
+  "references": [
+    {
+      "path": "../entities"
+    },
+    {
+      "path": "../features"
+    },
+    {
+      "path": "../persistance"
+    }
+  ]
+}

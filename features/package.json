@@ -1,0 +1,11 @@
+{
+  "name": "features",
+  "version": "1.0.0",
+  "description": "features for fortunate-vogue",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

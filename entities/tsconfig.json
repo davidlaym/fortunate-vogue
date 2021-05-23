@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.test.ts"],
+  "references": [],
+  "compilerOptions": {
+    "outDir": "../dist/entities",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true
+  }
+}
