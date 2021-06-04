@@ -1,0 +1,14 @@
+graph TB
+
+  A1 --> B1
+  B1 --> C1
+  B1-. "#171;interface#187;"  .-> A2
+  subgraph Entities Layer
+   C1("#171;node module#187;<br/>entities<br/><br/>Plain typescript module")
+  end
+  subgraph Bussiness Logic Layer
+    B1("#171;node module#187;<br/>features<br/><br/>Plain typescript module")
+  end
+  subgraph Adapter Layer
+    A1("#171;node module#187;<br/>HTTP API<br/><br/>Nest.js Framework<br/>Includes wrappers for features and persistance") --> A2("#171;node module#187;<br/>Persistance<br/><br/>Plain typescript module<br/>Uses mongoose ODM")
+  end

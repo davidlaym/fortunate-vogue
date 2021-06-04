@@ -3,8 +3,8 @@ import { IMovieRepository } from './movie-repository.interface';
 
 export function buildListAllMovies(
   movieRepository: IMovieRepository,
-): () => Movie[] {
-  return function listAllMovies(): Movie[] {
+): () => Promise<Movie[]> {
+  return async function listAllMovies(): Promise<Movie[]> {
     return movieRepository.findAll();
   };
 }

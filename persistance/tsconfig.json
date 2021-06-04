@@ -4,13 +4,19 @@
   "exclude": ["**/*.test.ts"],
   "compilerOptions": {
     "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "outDir": "../dist/persistance"
+    "outDir": "../dist/persistance",
+    "paths": {
+      "entities": ["../entities"],
+      "features": ["../features"],
+      "persistance": ["../persistance"]
+    }
   },
   "references": [
     {
       "path": "../entities"
+    },
+    {
+      "path": "../features"
     }
   ]
 }

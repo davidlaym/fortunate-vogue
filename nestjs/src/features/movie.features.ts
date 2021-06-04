@@ -1,15 +1,15 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { buildListAllMovies, IMovieRepository } from 'features';
 import { Movie } from 'entities';
 
 @Injectable()
 export class MoviesFeatures {
-  private listAllMovies: () => Movie[];
-  constructor(movieRepository: IMovieRepository) {
+  private listAllMovies: () => Promise<Movie[]>;
+  constructor(@Inject('IMovieRepository') movieRepository: IMovieRepository) {
     this.listAllMovies = buildListAllMovies(movieRepository);
   }
 
-  getAll(): Movie[] {
+  async getAll(): Promise<Movie[]> {
     return this.listAllMovies();
   }
 }

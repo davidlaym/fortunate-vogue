@@ -5,7 +5,10 @@
   "author": "",
   "private": true,
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "generate:module": "nest g mo",
+    "generate:service": "nest g s"
+  },
   "dependencies": {
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",

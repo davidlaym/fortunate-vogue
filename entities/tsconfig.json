@@ -5,8 +5,6 @@
   "references": [],
   "compilerOptions": {
     "outDir": "../dist/entities",
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true
+    "composite": true
   }
 }

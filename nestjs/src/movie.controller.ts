@@ -5,7 +5,8 @@ import { MoviesFeatures } from './features/movie.features';
 export class MovieController {
   constructor(private readonly movieService: MoviesFeatures) {}
   @Get()
-  getAll(): Record<string, unknown>[] {
-    return this.movieService.getAll() as unknown as Record<string, unknown>[];
+  async getAll(): Promise<Record<string, unknown>[]> {
+    const result = (await this.movieService.getAll()) as unknown;
+    return result as Record<string, unknown>[];
   }
 }
